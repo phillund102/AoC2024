@@ -6,6 +6,7 @@ namespace Day2
     {
         static void Main(string[] args)
         {
+            //Not proud of this day, but whatever it works... :D 
             var input = File.ReadAllLines("input.txt");
 
             Part1(input);
