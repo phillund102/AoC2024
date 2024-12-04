@@ -16,7 +16,6 @@ namespace Day4
         static void Main(string[] args)
         {
             var input = File.ReadAllLines("input.txt");
-            var test = File.ReadAllLines("test.txt");
 
             Part1(input);
             Part2(input);
@@ -88,12 +87,10 @@ namespace Day4
             //kolla positionerna 0,2,4,6,8 för MAS eller SAM
             foreach (string word in cubes)
             {
-                if ((word[0] == 'M' && word[4] == 'A' && word[8] == 'S') || (word[0] == 'S' && word[4] == 'A' && word[8] == 'M'))
+                if (((word[0] == 'M' && word[4] == 'A' && word[8] == 'S') || (word[0] == 'S' && word[4] == 'A' && word[8] == 'M')) &&
+                    ((word[2] == 'M' && word[4] == 'A' && word[6] == 'S') || (word[2] == 'S' && word[4] == 'A' && word[6] == 'M')))
                 {
-                    if ((word[2] == 'M' && word[4] == 'A' && word[6] == 'S') || (word[2] == 'S' && word[4] == 'A' && word[6] == 'M'))
-                    {
-                        sum++;
-                    }
+                    sum++;
                 }
             }
             Console.WriteLine(sum);
